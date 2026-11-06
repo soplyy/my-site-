@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b1220;
+    color: #f1f5f9;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    height: 75px;
+    background: #111c2d;
+    border-bottom: 1px solid #26364d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #73a7ff;
+}
+
+.header-right {
+    color: #91a4bf;
+    font-size: 12px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: calc(100vh - 75px);
+}
+
+.sidebar {
+    padding: 25px 18px;
+    background: #101a2a;
+    border-right: 1px solid #26364d;
+}
+
+.sidebar h3 {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 18px;
+}
+
+.topic-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 7px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    color: #cbd5e1;
+    cursor: pointer;
+    text-align: left;
+}
+
+.topic-button:hover {
+    background: #1a2b43;
+}
+
+.topic-button.active {
+    background: #203b60;
+    border-color: #416da7;
+    color: white;
+}
+
+.topic-number {
+    background: #29466e;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.progress-card {
+    margin-top: 35px;
+    padding: 15px;
+    background: #17253a;
+    border-radius: 10px;
+}
+
+.progress-card h3 {
+    margin-bottom: 10px;
+}
+
+#progressPercent {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress-line {
+    height: 6px;
+    background: #34445c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #4ed6a0;
+    transition: width .3s;
+}
+
+#progressText {
+    color: #94a3b8;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.main {
+    padding: 35px;
+    min-width: 0;
+}
+
+.heading {
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    color: #78aaff;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.heading h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+#topicDescription {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 20px;
+    align-items: start;
+}
+
+.task-panel,
+.numbers-panel {
+    background: #111c2d;
+    border: 1px solid #26364d;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid #26364d;
+}
+
+.task-header button {
+    padding: 7px 12px;
+    background: #20344f;
+    color: white;
+    border: 1px solid #344d70;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task-content {
+    padding: 25px;
+}
+
+.task-category {
+    color: #77aaff;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+
+.task-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.condition {
+    font-size: 17px;
+    line-height: 1.8;
+    min-height: 90px;
+}
+
+.math {
+    font-family: Georgia, serif;
+    font-size: 21px;
+}
+
+.answer-block {
+    margin-top: 25px;
+    padding: 18px;
+    background: #0d1726;
+    border: 1px solid #26364d;
+    border-radius: 10px;
+}
+
+.answer-block label {
+    display: block;
+    color: #94a3b8;
+    font-size: 11px;
+    margin-bottom: 12px;
+}
+
+.answer-row {
+    display: flex;
+    gap: 10px;
+}
+
+.answer-row input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    background: #1a2b42;
+    border: 1px solid #405673;
+    border-radius: 7px;
+    color: white;
+    font-size: 15px;
+}
+
+.answer-row button {
+    background: #75a8ff;
+    color: #081426;
+    border: none;
+    border-radius: 7px;
+    padding: 0 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#result {
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+.correct {
+    color: #4ed6a0;
+}
+
+.incorrect {
+    color: #ff7777;
+}
+
+.solution-button {
+    margin-top: 20px;
+     background: none;
+    color: #83b2ff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.solution {
+    margin-top: 20px;
+    padding: 20px;
+    background: #17273c;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.solution h3 {
+    color: #79bfa7;
+    margin-bottom: 12px;
+}
+
+.solution p {
+    margin-bottom: 9px;
+}
+
+.hidden {
+    display: none;
+}
+
+.numbers-panel {
+    padding: 18px;
+}
+
+.numbers-panel h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.numbers-panel p {
+    color: #94a3b8;
+    font-size: 11px;
+}
+
+#taskNumbers {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+    margin: 20px 0;
+}
+
+.task-number-button {
+    padding: 11px 0;
+    background: #1b2b41;
+    color: #cbd5e1;
+    border: 1px solid #34465f;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task-number-button.current {
+    background: #315d96;
+    color: white;
+}
+
+.task-number-button.done {
+    background: #155143;
+    border-color: #287b65;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+footer {
+    color: #71839e;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+@media (max-width: 900px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .numbers-panel {
+        order: -1;
+    }
+
+    #taskNumbers {
+        grid-template-columns: repeat(10, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        display: block;
+    }
+
+    .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #26364d;
+    }
+
+    .main {
+        padding: 20px 13px;
+    }
+
+    .header {
+        padding: 0 15px;
+    }
+
+    .heading h1 {
+        font-size: 25px;
+    }
+
+    .answer-row {
+        flex-direction: column;
+    }
+
+    .answer-row button {
+        padding: 13px;
+    }
+
+    #taskNumbers {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}

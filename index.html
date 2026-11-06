@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЕГЭ Профиль — Тренажёр 2027</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">∑ ЕГЭ <span>ПРОФИЛЬ</span></div>
+        <div class="header-right">ТРЕНАЖЁР 2027</div>
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h3>ВТОРАЯ ЧАСТЬ</h3>
+            <div id="topics"></div>
+
+            <div class="progress-card">
+                <h3>Мой прогресс</h3>
+                <div id="progressPercent">0%</div>
+                <div class="progress-line">
+                    <div id="progressBar"></div>
+                </div>
+                <p id="progressText">Решено 0 заданий</p>
+            </div>
+        </aside>
+
+        <main class="main">
+
+            <div class="heading">
+                <div>
+                    <p class="subtitle" id="topicNumber">ЗАДАНИЕ №14</p>
+                    <h1 id="topicTitle">Уравнения</h1>
+                    <p id="topicDescription"></p>
+                </div>
+            </div>
+
+            <div class="workspace">
+
+                <section class="task-panel">
+
+                    <div class="task-header">
+                        <span>ЗАДАНИЕ <b id="taskNumber">1</b></span>
+
+                        <div>
+                            <button id="previousTask">←</button>
+                            <button id="nextTask">→</button>
+                        </div>
+                    </div>
+
+                    <div class="task-content">
+
+                        <div class="task-category" id="taskCategory">
+                            МАТЕМАТИКА
+                        </div>
+
+                        <h2 id="taskName"></h2>
+
+                        <div id="taskCondition" class="condition"></div>
+
+                        <div class="answer-block">
+                            <label for="answer">ТВОЙ ОТВЕТ</label>
+
+                            <div class="answer-row">
+                                <input type="text" id="answer" placeholder="Введи ответ">
+
+                                <button id="checkAnswer">
+                                    Проверить
+                                </button>
+                            </div>
+
+                            <div id="result"></div>
+                        </div>
+
+                        <button id="showSolution" class="solution-button">
+                            Показать подробное решение
+                        </button>
+
+                        <div id="solution" class="solution hidden"></div>
+
+                    </div>
+                </section>
+
+                <aside class="numbers-panel">
+                    <h3>Все задания раздела</h3>
+                    <p>Выбери номер задания</p>
+
+                    <div id="taskNumbers"></div>
+
+                    <div class="legend">
+                        <span>🟦 Текущее</span>
+                        <span>🟩 Решено</span>
+                    </div>
+                </aside>
+
+            </div>
+
+            <footer>
+                Авторские тренировочные задания по материалам и прототипам ФИПИ.
+                Не являются официальными заданиями ФИПИ.
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
